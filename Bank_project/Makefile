@@ -10,7 +10,7 @@ CXXFLAGS = -Wall -Wextra -std=c++17
 TARGET = main
 
 # Source files
-SRCS = main.cpp
+SRCS = main.cpp Bank.cpp BankAccount.cpp 
 
 # Default rule
 all: $(TARGET)
