@@ -11,7 +11,7 @@ TARGET = main
 
 # Source files
 SRCS = ../src/main.cpp ../src/Bank.cpp ../src/BankAccount.cpp ../src/atm.cpp
-
+TESTS = tests/testBankAccount.cpp tests/testBank.cpp tests/testATM.cpp
 # Default rule
 all: $(TARGET)
 
@@ -23,3 +23,5 @@ $(TARGET): $(SRCS)
 clean:
 	rm -f $(TARGET)
 
+tests:
+	$(CXX) $(CXXFLAGS) $(TESTS) $(SRC) -o build/tests

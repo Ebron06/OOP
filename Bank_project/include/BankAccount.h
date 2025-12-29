@@ -15,6 +15,7 @@ class BankAccount {
     void withdraw(double amount);
     void printInfo() const;
     const std::string& getName() const;
+    const double& getBalance() const;
 };
 
 #endif
