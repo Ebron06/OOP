@@ -10,7 +10,7 @@ class BankAccount {
     double balance;
 
   public:
-    BankAccount(const std::string name, double curr_balance);
+    BankAccount(const std::string& name, double curr_balance);
     void deposit(double amount);
     void withdraw(double amount);
     void printInfo() const;

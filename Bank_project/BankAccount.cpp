@@ -4,8 +4,12 @@
 #include "Bank.h"
 
 
-    BankAccount::BankAccount(const std::string name, double curr_balance)
-      : ownerName(name), balance(curr_balance){};
+    BankAccount::BankAccount(const std::string& name, double curr_balance)
+      : ownerName(name), balance(0.00)
+      {
+        if (curr_balance > 0)
+            balance = curr_balance;
+      }
 
     void BankAccount::deposit(double amount) {
       if (amount <= 0) {
