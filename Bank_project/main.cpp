@@ -2,6 +2,10 @@
 #include "BankAccount.h"
 #include <iostream>
 
+/* TODO:implement interface for banking system
+    add unit test
+
+*/
 int main() {
     Bank bank;
 

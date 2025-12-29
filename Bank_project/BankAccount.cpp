@@ -28,7 +28,7 @@
       std::cout << "Name: " << this->ownerName << "\n";
       std::cout << "Current Balance: $" << this->balance << "\n";
     }
-    std::string BankAccount::getName() const {
+    const std::string& BankAccount::getName() const {
       return ownerName;
     }
 
