@@ -4,16 +4,10 @@
 #include "Bank.h"
 
 
-class BankAccount {
-  private:
-    std::string ownerName;
-    double balance;
-
-  public:
-    BankAccount(const std::string name, double curr_balance)
+    BankAccount::BankAccount(const std::string name, double curr_balance)
       : ownerName(name), balance(curr_balance){};
 
-    void deposit(double amount) {
+    void BankAccount::deposit(double amount) {
       if (amount <= 0) {
         std::cout << "The amount you input has to be over $0\n";
         return;
@@ -22,7 +16,7 @@ class BankAccount {
     }
 
 
-    void withdraw(double amount) {
+    void BankAccount::withdraw(double amount) {
       if (balance < amount) {
         std::cout << "Insufficient Funds\n";
         return;
@@ -30,12 +24,12 @@ class BankAccount {
       balance -= amount;
     }
 
-    void printInfo() const {
+    void BankAccount::printInfo() const {
       std::cout << "Name: " << this->ownerName << "\n";
       std::cout << "Current Balance: $" << this->balance << "\n";
     }
-    std::string getName() const {
+    std::string BankAccount::getName() const {
       return ownerName;
     }
-};
+
 

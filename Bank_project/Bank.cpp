@@ -5,27 +5,21 @@
 #include "Bank.h"
 
 
-class Bank {
-  private:
-    std::vector<BankAccount> accounts;
-
-  public:
-    void addAccount(const BankAccount& account) {
+    void Bank::addAccount(const BankAccount& account) {
       accounts.push_back(account);
     }
 
-    void listAccounts() const {
-      for (const auto&  acc : accounts) {
+    void Bank::listAccounts() const {
+      for (const auto&  acc : Bank::accounts) {
         std::cout << acc.getName() << "\n";
       }
     }
 
-    BankAccount* findAccount(const std::string& name) {
-       for (const auto& accounts : accounts) {
-         if (accounts.getName() == name) {
-           return &accounts;
+    BankAccount* Bank::findAccount(const std::string& name) {
+       for (auto& acc : Bank::accounts) {
+         if (acc.getName() == name) {
+           return &acc;
          }
+        }
         return nullptr;
-       }
     }
-};
