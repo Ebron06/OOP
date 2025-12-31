@@ -23,3 +23,7 @@
         }
         return nullptr;
     }
+    
+    int Bank::getAccountSize() const {
+      return accounts.size();
+    }

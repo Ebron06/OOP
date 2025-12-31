@@ -14,6 +14,7 @@ class Bank{
     void addAccount(const BankAccount& account);
     void listAccounts() const;
     BankAccount* findAccount(const std::string& name);
+    int getAccountSize() const;
 };
 
 #endif
