@@ -2,21 +2,20 @@
 #include "BankAccount.h"
 #include <iostream>
 
-/* TODO:implement interface for banking system
-    add unit test
-
-*/
 int main() {
-    Bank bank;
+        
+        std::cout << "\n";
+        std::cout << "/********************************************************************************/\n";
+        std::cout << "                           Welcome to Ebron's ATM                                 \n";
+        std::cout << "                                                                                  \n";
+        std::cout << "                              Choose an Option                                    \n";
+        std::cout << "     1. Create Account                                       2. Withdraw Funds    \n";
+        std::cout << "                                                                                  \n";
+        std::cout << "     3. Deposit Funds                                        4. View Balance      \n";
+        std::cout << "                                                                                  \n";
+        std::cout << "/********************************************************************************/\n";
+        std::cout << "\n";
+    
 
-    bank.addAccount(BankAccount("Chris", 1000));
-    bank.addAccount(BankAccount("Alex", 500));
-
-    BankAccount* acc = bank.findAccount("Chris");
-    if (acc) {
-        acc->deposit(200);
-    }
-
-    bank.listAccounts();
 }
 

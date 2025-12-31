@@ -12,8 +12,8 @@ TEST_TARGET = build/tests
 
 
 # Source files
-SRCS = src/main.cpp src/Bank.cpp src/BankAccount.cpp src/atm.cpp
-TESTS = tests/test_bankaccount.cpp 
+SRCS = src/main.cpp src/Bank.cpp src/BankAccount.cpp 
+TESTS = tests/test_bankaccount.cpp tests/test_bank.cpp
 # Default rule
 all: $(TARGET) $(TEST_TARGET)
 
@@ -25,9 +25,9 @@ $(TARGET): $(SRCS)
 clean:
 	rm -f $(TARGET)
 #Build Test
-$(TEST_TARGET): $(TESTS) src/Bank.cpp src/BankAccount.cpp src/atm.cpp
+$(TEST_TARGET): $(TESTS) src/Bank.cpp src/BankAccount.cpp 
 	mkdir -p build
-	$(CXX) $(CXXFLAGS) -o $(TEST_TARGET) $(TESTS) src/Bank.cpp src/BankAccount.cpp src/atm.cpp
+	$(CXX) $(CXXFLAGS) -o $(TEST_TARGET) $(TESTS) src/Bank.cpp src/BankAccount.cpp 
 
 #Build TEST
 $(TEST): $(SRCS)

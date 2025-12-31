@@ -1,6 +1,9 @@
 #include "../include/BankAccount.h"
 #include <iostream>
 
+bool testAddAccount();
+bool testFindAccount();
+
 
 bool testDeposit() {
     BankAccount account("Justin", 600.00);
@@ -20,6 +23,8 @@ int main() {
 
     if(testDeposit()) passed++; else failed++;
     if(testWithdraw()) passed++; else failed++;
+    if(testAddAccount())passed++; else failed++;
+    if(testFindAccount())passed++; else failed++;
 
 
     std::cout << "Test passed: " << passed << std::endl;

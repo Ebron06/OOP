@@ -4,8 +4,18 @@
 
 
 bool testAddAccount() {
-    BankAccount acc = BankAccount("Chris", 500);
-    Bank::addAccount(acc);
-    return Bank::getAccountSize() == 1;    
+    Bank bank;
+    BankAccount acc("Chris", 500);
+    bank.addAccount(acc);
+    return bank.getAccountSize() == 1;    
 }
 
+bool testFindAccount() {
+    Bank bank;
+    BankAccount acc("John", 500);
+    BankAccount acc2("Mannuy", 900);
+    bank.addAccount(acc);
+    bank.addAccount(acc2);
+    return bank.findAccount("John");
+
+}
